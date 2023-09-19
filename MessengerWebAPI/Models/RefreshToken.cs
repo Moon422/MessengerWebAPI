@@ -9,7 +9,7 @@ namespace MessengerWebApi.Models
         public long Id { get; set; }
 
         [Required]
-        [MaxLength(32)]
+        [StringLength(32)]
         public string Token { get; set; }
 
         public long AuthId { get; set; }

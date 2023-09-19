@@ -21,6 +21,23 @@ namespace MessengerWebApi.Repositories
                 .WithOne(u => u.Auth)
                 .HasForeignKey<Auth>(a => a.UserId)
                 .IsRequired();
+
+                entity.HasIndex(a => a.Username).IsUnique();
+            });
+
+            modelBuilder.Entity<RefreshToken>(entity =>
+            {
+                entity.HasOne(rt => rt.Auth)
+                .WithMany(a => a.RefreshTokens)
+                .HasForeignKey(rt => rt.AuthId)
+                .IsRequired();
+
+                entity.Property(rt => rt.Token).IsFixedLength();
+            });
+
+            modelBuilder.Entity<User>(entity =>
+            {
+                entity.HasIndex(u => u.Email).IsUnique();
             });
 
             base.OnModelCreating(modelBuilder);

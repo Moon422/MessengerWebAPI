@@ -1,5 +1,5 @@
 using System;
-using MessengerWebApi.Repositories;
+using MessengerWebAPI.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;

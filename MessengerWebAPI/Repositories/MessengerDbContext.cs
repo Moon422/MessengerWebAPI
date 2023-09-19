@@ -1,7 +1,7 @@
-using MessengerWebApi.Models;
+using MessengerWebAPI.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace MessengerWebApi.Repositories
+namespace MessengerWebAPI.Repositories
 {
     public class MessengerDbContext : DbContext
     {

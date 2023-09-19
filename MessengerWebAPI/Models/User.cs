@@ -1,7 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace MessengerWebApi.Models
+namespace MessengerWebAPI.Models
 {
     public class User
     {

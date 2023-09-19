@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace MessengerWebApi.Models
+namespace MessengerWebAPI.Models
 {
     public class Auth
     {

@@ -1,25 +1,26 @@
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace MessengerWebApi.Models
 {
-    public class Auth
+    public class User
     {
         [Key]
         public long Id { get; set; }
 
         [Required]
-        [MaxLength(64)]
-        public string Username { get; set; }
+        [MaxLength(256)]
+        public string FirstName { get; set; }
 
         [Required]
-        [MaxLength(60)]
-        public string Password { get; set; }
+        [MaxLength(256)]
+        public string LastName { get; set; }
 
-        public long UserId { get; set; }
-        public User User { get; set; }
-        public List<RefreshToken> RefreshTokens { get; set; }
+        [Required]
+        [MaxLength(256)]
+        public string Email { get; set; }
+
+        public Auth Auth { get; set; }
 
         [Required]
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
